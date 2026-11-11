@@ -9,8 +9,11 @@
 </section>
 <section class="about-story">
     <div class="about-story-image">
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1100&auto=format&fit=crop" alt="Sunset over a green mountain landscape" loading="lazy">
-        <div class="about-image-note"><span aria-hidden="true">⌖</span><span><b>One beautiful country</b><small>Countless places to explore</small></span></div>
+        <img src="<?=url('assets/images/bangladesh-map.png')?>" alt="Illustrated district and divisional map of Bangladesh" loading="lazy">
+        <div class="about-image-note">
+            <span aria-hidden="true">⌖</span>
+            <span><b>One beautiful country</b><small>64 districts, countless places to explore</small></span>
+        </div>
     </div>
     <div class="about-story-copy">
         <span class="about-section-label">A little about us</span>
