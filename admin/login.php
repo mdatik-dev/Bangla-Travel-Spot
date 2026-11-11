@@ -13,17 +13,26 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     $error='Incorrect email or password, or this account is not an administrator account.';
 }
 $page_title='Admin Login';
-require '../includes/header.php';
 ?>
-<section class="auth-layout">
-    <div class="auth-photo" style="background-image:linear-gradient(0deg,rgba(3,34,27,.56),rgba(3,34,27,.2)),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200')">
-        <h1>Admin<br>Portal</h1>
-        <p>Manage destinations and keep Bangla Travel Spot running smoothly.</p>
-    </div>
-    <div class="auth-panel">
-        <span class="green"><b>Restricted access</b></span>
-        <h2>Administrator Login</h2>
-        <p class="muted">Sign in with an active administrator account.</p>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?=$page_title?> | Bangla Travel Spot</title>
+    <link rel="stylesheet" href="<?=url('assets/css/style.css')?>">
+    <link rel="stylesheet" href="<?=url('admin/admin.css')?>">
+    <script defer src="<?=url('assets/js/app.js')?>"></script>
+</head>
+<body class="admin-login-body">
+    <main class="admin-login-card">
+        <a class="admin-login-brand" href="<?=url('index.php')?>">
+            <span class="admin-login-brand-mark" aria-hidden="true">◆</span>
+            <span>Bangla Travel Spot</span>
+        </a>
+        <div class="admin-login-kicker">ADMIN CONSOLE</div>
+        <h1>Welcome back</h1>
+        <p class="admin-login-description">Sign in with an active administrator account to manage the website.</p>
         <?php if($error):?><div class="alert"><?=e($error)?></div><?php endif;?>
         <form method="post" class="form-card">
             <?=csrf_field()?>
@@ -36,7 +45,7 @@ require '../includes/header.php';
             </label>
             <button class="btn btn-primary btn-block" type="submit">Login as Admin</button>
         </form>
-        <p class="center">Traveller? <a href="<?=url('auth/login.php')?>">Go to user login</a></p>
-    </div>
-</section>
-<?php require '../includes/footer.php';?>
+        <p class="admin-login-back">Traveller? <a href="<?=url('auth/login.php')?>">Go to user login</a></p>
+    </main>
+</body>
+</html>
