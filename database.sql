@@ -1,4 +1,4 @@
--- Explore Bangladesh database | MySQL 5.7+ / MariaDB 10.4+
+-- Bangla Travel Spot database | MySQL 5.7+ / MariaDB 10.4+
 CREATE DATABASE IF NOT EXISTS explore_bangladesh CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE explore_bangladesh;
 SET FOREIGN_KEY_CHECKS=0;
@@ -128,4 +128,4 @@ INSERT INTO places(category_id,name,slug,district,description,how_to_go,where_to
 (1,'Saint Martin’s Island','saint-martins-island','Cox’s Bazar','Saint Martin’s is a small coral island in the Bay of Bengal, known for clear water, coastal scenery and a relaxed island atmosphere.','Reach Teknaf or the currently designated departure point and use authorised vessels when services are operating. Seasonal access rules may change.','Small hotels and guest houses operate subject to current island regulations and seasonal availability.','Enjoy coastal walks, local seafood, photography and responsible nature observation.','November – February (check current access rules)',11000,'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200','https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900','https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=900','https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900',4.5,'published',0),
 (6,'Kaptai Lake','kaptai-lake','Rangamati','Kaptai Lake is a vast scenic lake surrounded by green hills and small islands, offering a peaceful escape in Rangamati.','Travel to Rangamati by bus and hire a registered boat from an authorised ghat for lake trips.','Hotels, resorts and guest houses are available in Rangamati town and nearby areas.','Boat rides, island visits, lakeside views, local food and photography.','October – March',6000,'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200','https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900','https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900',4.4,'published',0);
 
-INSERT INTO settings(setting_key,setting_value) VALUES ('site_name','Explore Bangladesh'),('contact_email','hello@explorebangladesh.test');
+INSERT INTO settings(setting_key,setting_value) VALUES ('site_name','Bangla Travel Spot'),('contact_email','hello@explorebangladesh.test');

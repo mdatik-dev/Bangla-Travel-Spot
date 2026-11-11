@@ -5,8 +5,23 @@ function url($path=''){return rtrim(BASE_URL,'/').'/'.ltrim($path,'/');}
 function redirect($path){header('Location: '.url($path));exit;}
 function user(){return $_SESSION['user']??null;}
 function logged_in(){return (bool)user();}
+function authenticate_account($email,$password,$role){
+ global $pdo;
+ $s=$pdo->prepare('SELECT id,name,email,password,role FROM users WHERE email=? AND role=? AND status="active"');
+ $s->execute([strtolower(trim($email)),$role]);
+ $account=$s->fetch();
+ return $account&&password_verify($password,$account['password'])?$account:null;
+}
+function redirect_to_dashboard(){redirect(user()['role']==='admin'?'admin/index.php':'user/dashboard.php');}
 function require_login(){if(!logged_in()){$_SESSION['flash']='Please login to continue.';redirect('auth/login.php');}}
-function require_admin(){require_login();if(user()['role']!=='admin'){http_response_code(403);exit('Access denied');}}
+function require_user(){
+ if(!logged_in()){$_SESSION['flash']='Please login to continue.';redirect('auth/login.php');}
+ if(user()['role']!=='user')redirect_to_dashboard();
+}
+function require_admin(){
+ if(!logged_in()){$_SESSION['flash']='Please login as an administrator to continue.';redirect('admin/login.php');}
+ if(user()['role']!=='admin')redirect_to_dashboard();
+}
 function flash(){if(!empty($_SESSION['flash'])){$m=$_SESSION['flash'];unset($_SESSION['flash']);return '<div class="alert">'.e($m).'</div>';}return '';}
 function csrf_token(){if(empty($_SESSION['csrf']))$_SESSION['csrf']=bin2hex(random_bytes(32));return $_SESSION['csrf'];}
 function csrf_field(){return '<input type="hidden" name="csrf" value="'.e(csrf_token()).'">';}

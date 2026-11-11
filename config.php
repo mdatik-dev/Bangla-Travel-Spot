@@ -1,5 +1,5 @@
 <?php
-// Explore Bangladesh - Core PHP configuration
+// Bangla Travel Spot - Core PHP configuration
 if (session_status() === PHP_SESSION_NONE) session_start();
 date_default_timezone_set('Asia/Dhaka');
 define('BASE_URL', '/Bangla-Travel-Spot'); // Change if your folder name/path differs.

@@ -1,4 +1,4 @@
-# Explore Bangladesh — Raw PHP Tourism Platform
+# Bangla Travel Spot — Raw PHP Tourism Platform
 
 A responsive destination discovery and trip-planning application built with **Core/Raw PHP, MySQL, HTML, CSS and vanilla JavaScript**. No Laravel, framework or Composer package is required.
 
@@ -6,7 +6,7 @@ A responsive destination discovery and trip-planning application built with **Co
 - Home page with featured destinations
 - Destination search, category and budget filters
 - Destination detail with overview, transport, accommodation, activities, gallery, budget and reviews
-- Registration, login, logout and role-based access
+- Separate user and admin login portals with role-based access
 - User dashboard, favorites, trip plans, reviews and profile settings
 - Admin dashboard, destination CRUD, category management, user blocking, review moderation and contact messages
 - PDO prepared statements, password hashing, CSRF tokens, output escaping and session ID regeneration
@@ -25,10 +25,16 @@ A responsive destination discovery and trip-planning application built with **Co
 6. Visit `http://localhost/Bangla-Travel-Spot/`.
 
 ## Admin login
+- Open `http://localhost/Bangla-Travel-Spot/admin/login.php`.
 - Email: `admin@explorebangladesh.test`
 - Password: `password`
 
 **Important:** Change the default admin password immediately after first login. This is a demo credential for local installation only.
+
+## User login
+- Open `http://localhost/Bangla-Travel-Spot/auth/login.php` to sign in as a user.
+- Create a user account at `http://localhost/Bangla-Travel-Spot/auth/register.php`.
+- User accounts can save destinations, plan trips, submit reviews and update their profile. Administrators use the separate admin portal to manage the site.
 
 ## Adding destinations
 Login as admin → Manage Places → Add New Destination. Add a remote image URL or a relative path such as `uploads/places/cox.jpg`. For reliable production use, upload optimized images to the uploads folder using your hosting file manager. The seed places use Unsplash image URLs and therefore need internet access to display those photos.
