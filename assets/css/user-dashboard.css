@@ -1,0 +1,325 @@
+.user-dashboard-layout {
+    align-items: start;
+    gap: 32px;
+    padding-top: 42px;
+}
+
+.user-dashboard-layout .sidebar {
+    position: sticky;
+    top: 96px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 16px 38px rgba(6, 75, 57, .13);
+}
+
+.user-dashboard-main {
+    min-width: 0;
+}
+
+.user-dashboard-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 25px;
+}
+
+.user-dashboard-heading h1 {
+    margin: 7px 0 5px;
+    font-size: clamp(26px, 3vw, 34px);
+    letter-spacing: -.8px;
+}
+
+.user-dashboard-heading p,
+.dashboard-panel-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.user-dashboard-heading > .btn {
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.dashboard-eyebrow {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.35px;
+}
+
+.user-stats-grid {
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.user-stats-grid .stat-card {
+    min-height: 86px;
+    border-color: #e8eee9;
+    background: linear-gradient(145deg, #fff, #f8fbf9);
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.user-stats-grid .stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #c8dfd1;
+    box-shadow: 0 10px 24px rgba(14, 45, 32, .07);
+}
+
+.user-stats-grid .stat-card span {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: var(--mint);
+    font-size: 20px;
+}
+
+.user-stats-grid .stat-card b {
+    line-height: 1;
+}
+
+.user-stats-grid .stat-card small {
+    margin-top: 4px;
+}
+
+.dashboard-panel {
+    margin-top: 17px;
+    padding: 22px;
+    border: 1px solid #e8eee9;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 24px rgba(14, 45, 32, .035);
+}
+
+.dashboard-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dashboard-panel-heading h2 {
+    margin: 4px 0 4px;
+    font-size: 19px;
+    letter-spacing: -.3px;
+}
+
+.dashboard-view-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-view-link span,
+.dashboard-empty-state .btn span {
+    transition: transform .2s;
+}
+
+.dashboard-view-link:hover span,
+.dashboard-empty-state .btn:hover span {
+    transform: translateX(3px);
+}
+
+.dashboard-empty-state {
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    border: 1px dashed #d4e4da;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #f6faf7, #fbfdfb);
+}
+
+.dashboard-empty-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #e4f3e9;
+    color: var(--green);
+    font-size: 24px;
+}
+
+.dashboard-empty-state h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
+
+.dashboard-empty-state p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.dashboard-empty-state .btn {
+    flex-shrink: 0;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.user-favorite-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.user-favorite-grid .place-image {
+    height: 128px;
+}
+
+.user-favorite-grid .place-info {
+    display: grid;
+    gap: 5px;
+}
+
+.user-favorite-grid .place-info small {
+    margin: 0;
+}
+
+.user-trip-list {
+    display: grid;
+    gap: 10px;
+}
+
+.user-trip-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px;
+    border: 1px solid #edf1ee;
+    border-radius: 11px;
+    transition: border-color .2s, background .2s;
+}
+
+.user-trip-card:hover {
+    border-color: #c8dfd1;
+    background: #fbfdfb;
+}
+
+.user-trip-card > img {
+    width: 62px;
+    height: 54px;
+    flex: 0 0 62px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.user-trip-details {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.user-trip-details b {
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-trip-details small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.user-trip-arrow {
+    margin-left: auto;
+    color: var(--green);
+}
+
+@media (max-width: 900px) {
+    .user-dashboard-layout {
+        gap: 22px;
+    }
+
+    .user-dashboard-layout .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-dashboard-layout {
+        padding: 24px 16px 42px;
+    }
+
+    .user-dashboard-layout .sidebar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 14px;
+    }
+
+    .user-dashboard-layout .profile-mini {
+        grid-column: 1 / -1;
+    }
+
+    .user-dashboard-main h1 {
+        font-size: 25px;
+    }
+
+    .user-dashboard-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .user-dashboard-heading > .btn {
+        width: 100%;
+    }
+
+    .user-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .user-stats-grid .stat-card {
+        min-height: 70px;
+    }
+
+    .dashboard-panel {
+        padding: 17px 14px;
+    }
+
+    .dashboard-empty-state {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .dashboard-empty-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        border-radius: 12px;
+        font-size: 20px;
+    }
+
+    .dashboard-empty-state > div {
+        flex: 1 1 calc(100% - 55px);
+        align-self: center;
+    }
+
+    .dashboard-empty-state .btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .user-favorite-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-favorite-grid .place-image {
+        height: 170px;
+    }
+}
