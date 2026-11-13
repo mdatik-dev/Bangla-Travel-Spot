@@ -25,7 +25,7 @@ A responsive destination discovery and trip-planning application built with **Co
 6. Visit `http://localhost/Bangla-Travel-Spot/`.
 
 ## Admin login
-- Open `http://localhost/Bangla-Travel-Spot/admin/login.php`.
+- Open url
 - Email: `admin@explorebangladesh.test`
 - Password: `password`
 
